@@ -1,6 +1,8 @@
 # 前序遍历
 * BinaryTree
 
+
+
 public class Main {
 	public static void main(String[] args) {
 		binaryTree binarytree=new binaryTree();
