@@ -2,7 +2,6 @@
 * BinaryTree
 
 public class Main {
-
 	public static void main(String[] args) {
 		binaryTree binarytree=new binaryTree();
 		Number no1=new Number(1);
@@ -19,9 +18,7 @@ public class Main {
 		no5.setRight(no6);
 		binarytree.preOrder();
 	}
-
 }
-
 class Number{
 	private int no;
 	private Number left;
@@ -69,8 +66,7 @@ class Number{
 		if(this.right!=null) {
 			this.right.preOrder();
 		}
-	}
-	
+	}	
 }
 class  binaryTree{
 	private Number root;
