@@ -1,6 +1,7 @@
 # 二叉树
 * BinaryTree
   * [二叉树的插入](#二叉树的插入)
+    * [自动存贮](#自动存贮)
   * [二叉树的遍历](#二叉树的遍历)
     * [preOrder](#preOrder)
     * [inOrder](#inOrder)
@@ -55,10 +56,54 @@ class Number{
 ```
 class  binaryTree{
 	private Number root;
-	
-	public void setRoot(Number root1) {
-		this.root=root1;
+}
+```
+## 自动存贮
+```
+binaryTree binarytree=new binaryTree();
+Scanner in=new Scanner(System.in);
+while(true) {
+	int n=in.nextInt();
+	binarytree.add(new Number(n));
+	binarytree.preOrder();
+}
+``` 
+即大于this的数放right  
+小于this的数放left  
+直到this的下一位为空  
+在Number类添加方法
+```
+class Number{
+public void addNo(Number number) {
+	if(number.no>this.no) {
+		if(this.right==null) {
+			this.right=number;
+		}
+		else {
+			this.right.addNo(number);
+		}
 	}
+	if(number.no<=this.no) {
+		if(this.left==null) {
+			this.left=number;
+		}else {
+			this.left.addNo(number);
+		}
+	}
+}
+}
+```
+在binarytree类中添加引用 
+```
+class binarytree{
+public void add(Number number) {
+	if(this.root==null) {
+		this.root=number;
+	}else {
+		root.addNo(number);
+	}
+}
+}
 ```
 # 二叉树的遍历
 ## preOrder
