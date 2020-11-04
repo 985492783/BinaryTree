@@ -2,6 +2,7 @@
 * BinaryTree
   * [二叉树的插入](#二叉树的插入)
     * [自动存贮](#自动存贮)
+    * [手动插入](#手动插入)
   * [二叉树的遍历](#二叉树的遍历)
     * [preOrder](#preOrder)
     * [inOrder](#inOrder)
@@ -105,6 +106,8 @@ public void add(Number number) {
 }
 }
 ```
+## 手动插入
+听名字就知道很傻逼
 # 二叉树的遍历
 ## preOrder
 ```
