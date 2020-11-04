@@ -70,17 +70,14 @@ class Number{
 }
 class  binaryTree{
 	private Number root;
-	
 	public void setRoot(Number root1) {
 		this.root=root1;
 	}
-
 	public void preOrder() {
 		if(this.root!=null) {
 			this.root.preOrder();
 		}else {
 			System.out.println("空");
 		}
-		
 	}
 }
