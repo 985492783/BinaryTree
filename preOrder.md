@@ -1,10 +1,10 @@
 # 二叉树
 * BinaryTree
-  *  二叉树的遍历
+  *  [二叉树的遍历](#二叉树的遍历)
     * [preOrder](#preOrder)
 
-
-# preOrder
+# 二叉树的遍历
+## preOrder
 ```
 public class Main {
 	public static void main(String[] args) {
