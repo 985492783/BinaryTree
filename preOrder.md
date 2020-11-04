@@ -1,29 +1,16 @@
 # 二叉树
 * BinaryTree
-  *  [二叉树的遍历](#二叉树的遍历)
+  * [二叉树的插入](#二叉树的插入)
+  * [二叉树的遍历](#二叉树的遍历)
     * [preOrder](#preOrder)
-
-# 二叉树的遍历
-## preOrder
+    * [inOrder](#inOrder)
+    * [postOrder](#postOrder)
+    
+    
+    
+# 二叉树的插入
+定义一个类，给数据
 ```
-public class Main {
-	public static void main(String[] args) {
-		binaryTree binarytree=new binaryTree();
-		Number no1=new Number(1);
-		Number no2=new Number(3);
-		Number no3=new Number(5);
-		Number no4=new Number(6);
-		Number no5=new Number(8);
-		Number no6=new Number(9);
-		binarytree.setRoot(no3);
-		no3.setLeft(no2);
-		no3.setRight(no5);
-		no2.setLeft(no1);
-		no5.setLeft(no4);
-		no5.setRight(no6);
-		binarytree.preOrder();
-	}
-}
 class Number{
 	private int no;
 	private Number left;
@@ -62,29 +49,94 @@ class Number{
 		return "Number [no=" + no + "]";
 	}
 	
-	
-	public void preOrder() {
-		System.out.println(this);
-		if(this.left!=null) {
-			this.left.preOrder();
-		}
-		if(this.right!=null) {
-			this.right.preOrder();
-		}
-	}	
 }
+```
+二叉数的方法-定义根？
+```
 class  binaryTree{
 	private Number root;
+	
 	public void setRoot(Number root1) {
 		this.root=root1;
 	}
-	public void preOrder() {
-		if(this.root!=null) {
-			this.root.preOrder();
-		}else {
-			System.out.println("空");
-		}
+```
+# 二叉树的遍历
+## preOrder
+```
+class binaryTree{
+public void preOrder() {
+	if(this.root!=null) {
+		this.root.preOrder();
+	}else {
+		System.out.println("空");		}	
 	}
 }
 ```
+分别在两个类中加入preOrder方法
+遍历顺序：根-左-右
+```
+class Number{
+public void preOrder() {
+	System.out.println(this);
+	if(this.left!=null) {
+		this.left.preOrder();
+	}
+	if(this.right!=null) {
+		this.right.preOrder();
+	}
+}
+}
+```
 
+## inOrder
+```
+class binaryTree{
+public void inOrder() {
+	if(this.root!=null) {
+		this.root.preOrder();
+	}else {
+		System.out.println("空");		}	
+	}
+}
+```
+分别在两个类中加入inOrder方法
+遍历顺序：左-根-右
+```
+class Number{
+public void inOrder() {
+	if(this.left!=null) {
+		this.left.preOrder();
+	}
+	System.out.println(this);
+	if(this.right!=null) {
+		this.right.preOrder();
+	}
+}
+}
+```
+## postOrder
+```
+class binaryTree{
+public void postOrder() {
+	if(this.root!=null) {
+		this.root.preOrder();
+	}else {
+		System.out.println("空");		}	
+	}
+}
+```
+分别在两个类中加入postOrder方法
+遍历顺序：左-右-根
+```
+class Number{
+public void postOrder() {
+	if(this.left!=null) {
+		this.left.preOrder();
+	}
+	if(this.right!=null) {
+		this.right.preOrder();
+	}
+	System.out.println(this);
+}
+}
+```
