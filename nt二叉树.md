@@ -18,6 +18,7 @@ class Number{
 	private int no;
 	private Number left;
 	private Number right;
+	private Number parent;
 	
 	public Number(int no) {
 		this.no=no;
@@ -45,6 +46,14 @@ class Number{
 
 	public void setRight(Number right) {
 		this.right = right;
+	}
+	
+	public Number getParent(){
+		return parent;
+	}
+	
+	public void setParent(Number parent){
+		this.parent=parent;
 	}
 
 	@Override
@@ -80,6 +89,7 @@ public void addNo(Number number) {
 	if(number.no>this.no) {
 		if(this.right==null) {
 			this.right=number;
+			number.parent=this;
 		}
 		else {
 			this.right.addNo(number);
@@ -88,6 +98,7 @@ public void addNo(Number number) {
 	if(number.no<=this.no) {
 		if(this.left==null) {
 			this.left=number;
+			number.parent=this;
 		}else {
 			this.left.addNo(number);
 		}
