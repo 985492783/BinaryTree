@@ -7,6 +7,7 @@
     * [preOrder](#preOrder)
     * [inOrder](#inOrder)
     * [postOrder](#postOrder)
+  * [二叉树的删除](#二叉树的删除)
   * [二叉树的search](#二叉树的search)
     * [子叶](#子叶)
     
@@ -189,7 +190,7 @@ public void postOrder() {
 }
 ```
 
-
+# 二叉树的删除
 # 二叉树的search
 easy  
 二叉树≈二分法  
