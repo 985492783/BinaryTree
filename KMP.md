@@ -1,7 +1,7 @@
 # Algorithms
 # KMP
- * [#Cyclic Nacklace](#Cyclic Nacklace)
-## Cyclic Nacklace
+ * [Cyclic Nacklace](#Cyclic Nacklace)
+# Cyclic Nacklace
 ```
 import java.util.Scanner;
 
